@@ -164,6 +164,14 @@ aside {
   margin-left: 3rem;
 }
 
+.biodata .data-text a {
+  display: block;
+  color: var(--black);
+}
+.biodata .data-text a:hover {
+  text-decoration: underline;
+}
+
 footer {
   text-align: center;
 }
@@ -185,14 +193,17 @@ footer {
   }
 
   .content {
-    justify-content: center;
+    align-items: center;
     display: flex;
     flex-flow: column nowrap;
   }
-
   .content img {
     width: 15rem;
     aspect-ratio: 1/1;
+  }
+
+  #team .content {
+    flex-flow: column-reverse;
   }
 }
 @media screen and (max-width: 768px) {
@@ -211,7 +222,8 @@ footer {
   .biodata {
     text-align: center;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column;
+    align-items: center;
   }
 
   .biodata .data-text {
